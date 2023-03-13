@@ -1,0 +1,454 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins',sans-serif;
+}
+
+
+body{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: max-content;
+    background: #cfd1e1;
+    min-height: 100vh;
+    overflow-x: auto; 
+}
+
+.navbar {
+    background: #131313;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+.navbar__container{
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    z-index: 1;
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 50px;
+}
+
+#navbar__logo{
+    background-color: #ff8177;
+    background-image: linear-gradient(to top,#ff0844 0%,#ffb199 100%);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 2rem;
+}
+
+.fa-gem{
+    margin-right: 0.5rem;
+}
+
+.navbar__menu{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    text-align: center;
+}
+
+.navbar__item{
+    height: 80px;
+}
+
+.navbar__links{
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    padding: 0 1rem;
+    height: 100%;
+}
+
+.navbar__btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1rem;
+    width: 100% ;
+}
+
+.button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    padding: 10px 20px;
+    height: 100%;
+    width: 100%;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    background: #f77062;
+    color: #fff;
+}
+
+.button:hover{
+    background: #4837ff;
+    transition: all 0.3s ease;
+}
+
+.navbar__links:hover{
+    color:#f77062;
+    transition: all 0.3s ease;
+}
+
+@media screen and (max-width: 960px){
+    .navbar__container{
+        display: flex;
+        justify-content: space-between;
+        height: 80px;
+        z-index: 1;
+        width: 100%;
+        max-width: 1300px;
+        padding: 0;
+    }
+
+    .navbar__menu{
+        opacity: 0;
+    }
+}
+
+.parallax{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#text{
+    position: absolute;
+    font-size: 7em;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+#text1{
+    position: absolute;
+    top: 55%;
+    font-size: 7em;
+    color: #f77062;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.parallax img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    pointer-events: none;
+}
+
+
+.main{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-size: 100%;
+    justify-content: center;
+    align-items: center;
+    background: #003329;
+    padding: 100px;
+    min-height: 100vh;
+}
+
+.php{
+    display: flex;
+    position: absolute;
+    top: 50%;
+}
+
+.searchbox{
+    position: absolute;
+    display: flex;
+    top: 30%;
+    left: 20%;
+    font-family: 'consolas';
+    width: 65px;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+}
+
+.searchbox:hover{
+    width: 1000px
+}
+
+.searchbox::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 10px;
+    height: 100%;
+    background: linear-gradient(#fff,#fff,#fff,#e3e3e3);
+    z-index: 1;
+    filter: blur(1px)
+}
+
+.searchbox::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -1px;
+    width: 10px;
+    height: 100%;
+    background: #9d9d9d;
+    z-index: 1;
+    filter: blur(1px)
+}
+.searchbox input{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border: none;
+    padding: 10px 25px;
+    outline: none;
+    font-size: 1.1rem;
+    color: #555;
+    background: linear-gradient(#dbdae1,#a3aaba);
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1),
+    15px 15px 15px rgba(0, 0, 0, 0.1),
+    20px 20px 15px rgba(0, 0, 0, 0.1),
+    30px 30px 15px rgba(0, 0, 0, 0.1);
+}
+
+.searchbox input::placeholder,
+.searchbox input{
+    color:transparent;
+    font-family: 'consolas';
+}
+.searchbox:hover input::placeholder,
+.searchbox:hover input{
+    color:#555;
+}
+#icon1{
+    position: absolute;
+    right: 20px;
+    color: #555;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.submit{
+    position: absolute;
+    display: flex;
+    top: 38%;
+    left: 20%;
+    width: 100px;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+}
+.submit input{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border: none;
+    padding: 10px 25px;
+    outline: none;
+    font-family: 'consolas';
+    font-size: 1.1rem;
+    color: #555;
+    background: linear-gradient(#dbdae1,#a3aaba);
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1),
+    15px 15px 15px rgba(0, 0, 0, 0.1),
+    20px 20px 15px rgba(0, 0, 0, 0.1),
+    30px 30px 15px rgba(0, 0, 0, 0.1);
+}
+.submit::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 10px;
+    height: 100%;
+    background: linear-gradient(#fff,#fff,#fff,#e3e3e3);
+    z-index: 1;
+    filter: blur(1px)
+}
+
+.submit::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -1px;
+    width: 10px;
+    height: 100%;
+    background: #9d9d9d;
+    z-index: 1;
+    filter: blur(1px)
+}
+
+.submit:hover{
+    width: 105px;
+    height: 55px;
+}
+
+.content-table{
+    border-collapse: collapse;
+    margin: 25px 10px;
+    width: 100%;
+    font-size: 0.9rem;
+    min-width: 400px;
+}
+
+.content-table thead tr{
+    background-color: #009879;
+    color: #ffffff;
+    text-align: left;
+    font-weight: bold;
+}
+
+.content-table th,
+.content-table td{
+    padding: 12px 15px;
+    color : #fff;
+}
+.content-table td:hover{
+    color: #131313;
+}
+.content-table tbody tr{
+    border-bottom: 1px solid #dddddd;
+}
+.content-table tbody tr:hover{
+    background-color: #ddd;
+}
+.content-table td img {
+    width: 100px;
+    height: 100px;
+    margin-right: .5rem;
+    border-radius: 50%;
+
+    vertical-align: middle;
+}
+footer{
+    position: relative;
+    width: 100%;
+    background: #3586ff;
+    min-height: 100px;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+footer .social_icon{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+    flex-wrap: wrap;
+}
+
+footer .social_icon li{
+    list-style: none;
+}
+
+footer .social_icon li a{
+    font-size: 2em;
+    color: #fff;
+    margin: 0 10px;
+    display: inline-block;
+    transition: 0.5s;
+}
+
+footer .social_icon li a:hover{
+    transform: translateY(-10px)
+}
+
+footer p{
+    color: #fff;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    font-size: 1.1em;
+}
+
+footer .wave{
+    position: absolute;
+    top: -100px;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: url(wave.png);
+    background-size: 1000px 100px;
+}
+
+footer .wave#wave1{
+    z-index: 1000;
+    opacity: 1;
+    bottom: 0;
+    animation: animateWAVE 4s linear infinite;
+}
+
+footer .wave#wave2{
+    z-index: 999;
+    opacity: 0.5;
+    bottom: 10px;
+    animation: animateWAVE_02 4s linear infinite;
+}
+
+footer .wave#wave3{
+    z-index: 1000;
+    opacity: 0.2;
+    bottom: 15px;
+    animation: animateWAVE 3s linear infinite;
+}
+
+footer .wave#wave4{
+    z-index: 999;
+    opacity: 0.7;
+    bottom: 20px;
+    animation: animateWAVE_02 3s linear infinite;
+}
+
+@keyframes animateWAVE{
+    0%
+    {
+        background-position-x: 1000px;
+    }
+    100%
+    {
+        background-position-x: 0px;
+    }
+}
+
+@keyframes animateWAVE_02{
+    0%
+    {
+        background-position-x: 0px;
+    }
+    100%
+    {
+        background-position-x: 1000px;
+    }
+}
